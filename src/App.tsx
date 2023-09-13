@@ -1,3 +1,10 @@
+import LandingPage from './components/LandingPage';
+import Introduction from './components/Introduction';
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className='bg-black'>
+      <LandingPage />
+      <Introduction />
+    </div>
+  );
 }
