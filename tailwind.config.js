@@ -6,17 +6,20 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      montserrat: ['Montserrat', 'sans-serif']
+      DMSans: ['DMSans', 'sans-serif']
     },
     extend: {
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'scale(1)'},
+          '0%, 100%': { transform: 'scale(1.02)'},
           '50%': { transform: 'scale(1.05)'}
         }
       },
       animation: {
-        float: 'float 5s ease-in-out infinite'
+        float: 'float 6s ease-in-out infinite'
+      },
+      colors: {
+        cream: '#fffcf1dc'
       }
     },
   },
