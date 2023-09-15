@@ -8,7 +8,7 @@ export default function LandingPage() {
         <div className='font-semibold z-10 text-[#f8f6e5] text-5xl pl-[17px]'>
           Hi there,
         </div>
-        <div className='name-text font-bold text-8xl z-10 bg-clip-text bg-gradient-to-tr from-[#ffbdfc] via-[#f8f6e5] to-[#f9c8b9] text-transparent p-4'>
+        <div className='animate-glow font-bold text-8xl z-10 bg-clip-text bg-gradient-to-tr from-[#f7aaf3] via-[#f8f6e5] to-[#feb29b] text-transparent p-4'>
           I'm Mindy.
         </div>
         <div className='text-cream tracking-[0.0125em] font-DMSans text-xl font-light z-10 pl-[17px] mt-5'>
@@ -17,7 +17,7 @@ export default function LandingPage() {
         </div>
       </div>
       <img
-        className='w-1/3 animate-float drop-shadow-glow drop'
+        className='w-1/3 animate-pulse drop-shadow-glow drop'
         src={profilePic}
         alt=''
       />
