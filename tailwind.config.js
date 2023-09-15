@@ -10,19 +10,30 @@ module.exports = {
     },
     extend: {
       keyframes: {
-        float: {
+        pulse: {
           '0%, 100%': { transform: 'scale(1.02)'},
           '50%': { transform: 'scale(1.05)'}
+        },
+        float: {
+          '0%': { transform: 'translateY(0px)'},
+          '50%': { transform: 'translateY(10px)'},
+          '100%': { transform: 'translateY(0px)'}
+        },
+        glow: {
+          '100%': { textShadow: '0 0 25px #f8f6e5b3'}
         }
       },
       animation: {
-        float: 'float 6s ease-in-out infinite'
+        pulse: 'pulse 5s ease-in-out infinite',
+        float1: 'float 3s ease-in-out infinite',
+        float2: 'float 3s ease-in-out -1.5s infinite',
+        glow: 'glow 1.5s ease-in-out infinite alternate'
       },
       colors: {
-        cream: '#fffcf1dc'
+        cream: '#f8f6e5'
       },
       dropShadow: {
-        glow: '1px 5px 10px rgba(255,252,241,0.5)'
+        glow: '1px 5px 10px #f8f6e5b3'
       }
     },
   },
