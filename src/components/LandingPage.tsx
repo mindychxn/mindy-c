@@ -1,12 +1,11 @@
+import React from 'react';
 import './landingpage.css';
 import profilePic from '../assets/landingPage.svg';
 export default function LandingPage() {
   return (
     <div className='landing-page flex items-center justify-center gap-14 relative h-screen'>
       <div className='flex flex-col w-[40%] p-10'>
-        <div
-          className='font-semibold z-10 text-[#f8f6e5] text-5xl pl-[17px]'
-        >
+        <div className='font-semibold z-10 text-[#f8f6e5] text-5xl pl-[17px]'>
           Hi there,
         </div>
         <div className='name-text font-bold text-8xl z-10 bg-clip-text bg-gradient-to-tr from-[#ffbdfc] via-[#f8f6e5] to-[#f9c8b9] text-transparent p-4'>
