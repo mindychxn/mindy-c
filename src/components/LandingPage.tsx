@@ -18,7 +18,7 @@ export default function LandingPage() {
         </div>
       </div>
       <img
-        className='w-1/3 animate-float drop-shadow-[1px_5px_10px_rgba(255,252,241,0.5)] drop'
+        className='w-1/3 animate-float drop-shadow-glow drop'
         src={profilePic}
         alt=''
       />
