@@ -20,6 +20,9 @@ module.exports = {
       },
       colors: {
         cream: '#fffcf1dc'
+      },
+      dropShadow: {
+        glow: '1px 5px 10px rgba(255,252,241,0.5)'
       }
     },
   },
