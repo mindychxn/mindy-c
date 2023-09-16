@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
 import './landingpage.css';
-import profilePic from '../assets/landingPage.svg';
+import landingAnimation from '../assets/landing1.json';
+
 export default function LandingPage() {
+  useEffect(() => {
+    const landing = lottie.loadAnimation({
+      animationData: landingAnimation,
+      autoplay: true,
+      container: landingContainer.current!,
+      loop: true,
+      renderer: 'svg',
+    });
+    return () => {
+      landing.destroy();
+    };
+  }, []);
+  const landingContainer = useRef(null);
   return (
-    <div className='landing-page flex items-center justify-center gap-14 relative h-screen'>
-      <div className='flex flex-col w-[40%] p-10'>
-        <div className='font-semibold z-10 text-[#f8f6e5] text-5xl pl-[17px]'>
+    <div className='landing-page flex flex-col lg:flex-row grid-cols-2 items-center justify-center relative sm:h-screen min-w-fit md:py-20'>
+      <div ref={landingContainer} className='w-[70%] md:w-[55%] lg:w-[40%] py-8' />
+        <div className='flex flex-col items-center lg:items-start text-center lg:text-left z-10 min-w-fit lg:min-w-0 lg:w-[600px] xl:w-[700px] px-10'>
+        <div className='font-semibold text-cream text-3xl md:text-5xl xl:text-6xl'>
           Hi there,
         </div>
-        <div className='animate-glow font-bold text-8xl z-10 bg-clip-text bg-gradient-to-tr from-[#f7aaf3] via-[#f8f6e5] to-[#feb29b] text-transparent p-4'>
+        <div className='animate-glow whitespace-nowrap min-w-fit font-bold text-6xl md:text-8xl xl:text-9xl bg-clip-text bg-gradient-to-tr from-[#f7aaf3] via-[#f8f6e5] to-[#feb29b] text-transparent py-2.5'>
           I'm Mindy.
         </div>
-        <div className='text-cream tracking-[0.0125em] font-DMSans text-xl font-light z-10 pl-[17px] mt-5'>
+        <div className='text-cream font-DMSans text-lg sm:text-xl font-light mt-5 w-[80%] md:w-2/3 lg:w-[90%] xl:text-2xl xl:w-full'>
           As a software developer, I aim to create impactful and innovative
           solutions.
         </div>
       </div>
-      <img
-        className='w-1/3 animate-pulse drop-shadow-glow drop'
-        src={profilePic}
-        alt=''
-      />
     </div>
   );
 }

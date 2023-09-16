@@ -22,13 +22,13 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className={`project-card flex flex-col w-full backdrop-blur-md border-cream/5 border hover:border-none  text-white bg-[#ffffff10] hover:bg-[#c4d6fc] rounded-lg p-4 transition-all ${className} hover:cursor-pointer hover:transition ease-in-out z-[100] px-8 py-8 h-fit`}
+      className={`project-card flex flex-col w-full backdrop-blur-md border-cream/5 border hover:border-none  text-white bg-[#ffffff10] hover:bg-[#c4d6fc] rounded-lg p-4 transition-all ${className} hover:cursor-pointer hover:transition ease-in-out z-50 px-8 py-8 h-fit`}
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
     >
       {!right && children}
-      <div className={`flex flex-col gap-1 ${right ? 'mb-4' : 'mt-4'}`}>
-        <div className='text-2xl sm:text-4xl font-semibold'>{name}</div>
+      <div className={`flex flex-col gap-1 xl:gap-2 ${right ? 'mb-4 xl:mb-7' : 'mt-4 xl:mt-7'}`}>
+        <div className='text-2xl sm:text-4xl font-semibold xl:text-[42px]'>{name}</div>
         <div className='font-DMSans font-light sm:text-xl'>{description}</div>
       </div>
       {right && children}
