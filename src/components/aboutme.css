@@ -1,0 +1,12 @@
+.about-me {
+  background-color: black;
+  background-image: radial-gradient(
+      at 0% 69%,
+      hsla(32, 100%, 79%, 0.23) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 38%, hsla(254, 87%, 56%, 0.7) 0px, transparent 50%),
+    radial-gradient(at 0% 59%, hsla(24, 100%, 49%, 0.78) 0px, transparent 50%),
+    radial-gradient(at 12% 49%, hsla(300, 81%, 47%, 0.33) 0px, transparent 50%);
+}
+
