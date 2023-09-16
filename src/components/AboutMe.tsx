@@ -1,55 +1,42 @@
 import React, { useEffect, useRef } from 'react';
-import computerAnimation from '../assets/computer.json';
-import waveAnimation from '../assets/wave.json';
-import gradient from '../assets/aboutMeGradient.svg';
+import './aboutme.css';
+import profileAnimation from '../assets/profile.json';
 import lottie from 'lottie-web';
 
 export default function AboutMe() {
   useEffect(() => {
-    const computer = lottie.loadAnimation({
-      animationData: computerAnimation,
+    const profile = lottie.loadAnimation({
+      animationData: profileAnimation,
       autoplay: true,
-      container: computerContainer.current!,
-      loop: true,
-      renderer: 'svg',
-    });
-    const wave = lottie.loadAnimation({
-      animationData: waveAnimation,
-      autoplay: true,
-      container: waveContainer.current!,
+      container: profileContainer.current!,
       loop: true,
       renderer: 'svg',
     });
     return () => {
-      computer.destroy();
-      wave.destroy();
+      profile.destroy();
     };
   }, []);
-
-  const computerContainer = useRef(null);
-  const waveContainer = useRef(null);
-
+  const profileContainer = useRef(null);
+  
   return (
-    <div
-      className='relative flex h-screen w-full font-DMSans justify-center items-center'
-      style={{
-        backgroundImage: `url('${gradient}')`,
-        backgroundSize: 'cover',
-      }}
-    >
-      <div className='backdrop-blur-[2px] z-50 bg-[#b05bff19] flex justify-center items-center flex-col h-fit rounded-lg font-DMSans text-white w-1/2'>
-        <div
-          className='w-[50%] h-[50%] drop-shadow-[1px_5px_10px_rgba(174,47,209,0.83)]'
-          ref={computerContainer}
-        />
-        <div className='font-semibold text-3xl font-DMSans'>
-          It's nice to meet you
+    <div className='relative flex flex-col lg:flex-row lg:gap-20 w-full font-DMSans justify-center items-center about-me py-20 px-10 mb-20'>
+      <div
+        className='-my-4 w-3/4 md:w-[60%] lg:w-[50%] drop-shadow-[1px_5px_10px_#ffac8090]'
+        ref={profileContainer}
+      />
+      <div className='flex flex-col gap-4 md:gap-6 text-center lg:text-left w-3/4 lg:w-1/2'>
+        <div className='font-bold text-[44px] sm:text-6xl bg-clip-text bg-gradient-to-tr from-[#ffbf9c] via-[#f1e8ff] to-[#5b00e3] text-transparent'>
+          About Me
+        </div>
+        <div className='font-DMSans font-light md:text-xl lg:w-[90%] text-white'>
+          I am a second your computer science student at the University of
+          Waterloo. Personally, I love the countless possiblities that coding
+          provides, allowing me to bring a vision or idea to life. Design is a
+          passion of mine and I really enjoyed creating this personal website.
+          Outside of coding, I enjoy reading, watching sitcoms / rom-coms,
+          cooking or baking, and playing badminton!
         </div>
       </div>
-      <div
-        className='absolute z-0 right-0 bottom-0 w-full drop-shadow-[1px_1px_2px_rgba(242,124,97,1)]'
-        ref={waveContainer}
-      />
     </div>
   );
 }
