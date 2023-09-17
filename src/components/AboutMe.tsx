@@ -20,12 +20,12 @@ export default function AboutMe() {
 
   return (
     <section id='about'>
-      <div className='relative flex flex-col lg:flex-row lg:gap-20 w-full font-DMSans justify-center items-center about-me px-10 pb-20'>
+      <div className='relative flex flex-col lg:flex-row lg:gap-20 w-full font-DMSans justify-center items-center about-me px-10 py-20'>
       <div
-        className='-my-4 w-3/4 md:w-[60%] lg:w-[50%] drop-shadow-[1px_5px_10px_#ffac8090]'
+        className='-my-4 w-3/4 md:w-[60%] lg:w-[50%] drop-shadow-[1px_5px_10px_#ffac8090] z-10'
         ref={profileContainer}
       />
-      <div className='flex flex-col gap-4 md:gap-6 text-center lg:text-left w-3/4 lg:w-1/2'>
+      <div className='flex flex-col gap-4 md:gap-6 text-center lg:text-left w-3/4 lg:w-1/2 z-10'>
         <div className='font-bold text-[44px] sm:text-6xl xl:text-7xl bg-clip-text bg-gradient-to-tr from-[#ffbf9c] via-[#f1e8ff] to-[#fb94f2] text-transparent'>
           About Me
         </div>
