@@ -25,7 +25,7 @@ export default function ProjectCard({
   return (
     <a href={href} target='_blank' rel='noreferrer' className='z-50'>
       <div
-        className={`project-card flex flex-col w-full backdrop-blur-md border-cream/5 border hover:border-none  text-white bg-[#ffffff10] hover:bg-[#c4d6fc] rounded-lg p-4 transition-all ${className} hover:cursor-pointer hover:transition ease-in-out px-8 py-8 h-fit`}
+        className={`project-card duration-700 ease-in-out flex flex-col w-full backdrop-blur-md border-cream/5 border hover:border-none  text-white bg-[#ffffff10] hover:bg-[#c4d6fc] rounded-lg p-4 transition-all ${className} hover:cursor-pointer hover:transition ease-in-out px-8 py-8 h-fit`}
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
       >
