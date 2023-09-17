@@ -16,10 +16,10 @@ export default function NavBar({
   return (
     <div className={`${className} w-full`}>
       <div
-        className='font-DMSans leading-widest text-cream mb-4 px-4 py-4 z-[100] w-full fixed rounded-lg font-light'
+        className='font-DMSans leading-widest text-cream mb-4 px-4 py-2 z-[100] w-full fixed rounded-lg font-light lg:backdrop-blur-sm'
       >
         <div className='flex justify-between items-center gap-5'>
-          <div className='xl:w-[15%] sm:w-[35%] md:w-[30vw] w-[50vw] h-fit flex items-center rounded-full backdrop-blur-sm py-3'>
+          <div className='sm:w-[35%] md:w-[30vw] lg:w-[20vw] w-[50vw] h-fit flex items-center rounded-full backdrop-blur-sm py-3'>
             <img
               className='invert drop-shadow-[1px_2px_5px_#fff6edde] px-5'
               src={logo}
@@ -56,7 +56,7 @@ export default function NavBar({
                   smooth 
                   to={'/#' + section.toLowerCase()}
                   key={i}
-                  className='2xl:text-lg py-3 px-5 rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
+                  className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
                 >
                   {section}
                 </HashLink>
