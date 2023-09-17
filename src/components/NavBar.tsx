@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import logo from '../assets/logo.svg';
+import { HashLink } from 'react-router-hash-link';
 
 export interface NavBarProps {
   sections: string[];
@@ -59,7 +60,9 @@ export default function NavBar({
           ) : (
             <div className='space-x-4 pr-4'>
               {sections.map((section, i) => (
-                <button
+                <HashLink
+                  smooth
+                  to={'/#' + section.toLowerCase()}
                   key={i}
                   className={`2xl:text-lg py-2.5 px-5 hover:scale-105 hover:translate-y-[0.3rem] rounded-full backdrop-blur-sm duration-500 hover:drop-shadow-[1px_3px_10px_#ffffffa8] transition ease-in-out ${
                     currentPlace === section ? currentStyles : ''
@@ -67,23 +70,33 @@ export default function NavBar({
                   onClick={() => setCurrentPlace(section)}
                 >
                   {section}
-                </button>
+                </HashLink>
               ))}
             </div>
           )}
         </div>
         {collapsed && (
-          <div className={`flex flex-col gap-4 items-end w-full z-[90] pr-4 transition-all duration-500 ${mobileMenu ? 'animate-[slideDown_1s] opacity-1' : 'animate-[slideUp_1s] opacity-0'}`}>
+          <div
+            className={`flex flex-col gap-4 items-end w-full z-[90] pr-4 transition-all duration-500 ${
+              mobileMenu
+                ? 'animate-[slideDown_1s] opacity-1'
+                : 'animate-[slideUp_1s] opacity-0'
+            }`}
+          >
             {sections.map((section, i) => (
-              <button
+              <HashLink
+                smooth
+                to={'/#' + section.toLowerCase()}
                 key={i}
-                className={`${mobileMenu ? '' : 'pointer-events-none'} 2xl:text-lg py-2.5 px-5 hover:scale-105 hover:translate-y-[0.3rem] bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:drop-shadow-[1px_3px_10px_#ffffffa8] transition ease-in-out ${
+                className={`${
+                  mobileMenu ? '' : 'pointer-events-none'
+                } 2xl:text-lg py-2.5 px-5 hover:scale-105 hover:translate-y-[0.3rem] bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:drop-shadow-[1px_3px_10px_#ffffffa8] transition ease-in-out ${
                   currentPlace === section ? currentStyles : ''
                 }`}
                 onClick={() => setCurrentPlace(section)}
               >
                 {section}
-              </button>
+              </HashLink>
             ))}
           </div>
         )}

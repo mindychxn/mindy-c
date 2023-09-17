@@ -19,7 +19,8 @@ export default function AboutMe() {
   const profileContainer = useRef(null);
 
   return (
-    <div className='relative flex flex-col lg:flex-row lg:gap-20 w-full font-DMSans justify-center items-center about-me px-10 pb-20'>
+    <section id='about'>
+      <div className='relative flex flex-col lg:flex-row lg:gap-20 w-full font-DMSans justify-center items-center about-me px-10 pb-20'>
       <div
         className='-my-4 w-3/4 md:w-[60%] lg:w-[50%] drop-shadow-[1px_5px_10px_#ffac8090]'
         ref={profileContainer}
@@ -38,5 +39,7 @@ export default function AboutMe() {
         </div>
       </div>
     </div>
+    </section>
+    
   );
 }
