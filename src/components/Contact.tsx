@@ -21,7 +21,7 @@ export default function Contact() {
       body: json,
     })
       .then(async response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           resultRef.current!.innerHTML = 'Thank you for your message!';
         }
       })
@@ -101,6 +101,7 @@ export default function Contact() {
           <a
             href='mailto:mindychxn@gmail.com'
             target='_blank'
+            rel='noreferrer'
             className='hover:scale-110 transition-all duration-300 hover:drop-shadow-glow'
           >
             <FontAwesomeIcon icon={faEnvelope} />
@@ -108,6 +109,7 @@ export default function Contact() {
           <a
             href='https://github.com/mindychxn'
             target='_blank'
+            rel='noreferrer'
             className='hover:scale-110 transition-all duration-300 hover:drop-shadow-glow'
           >
             <FontAwesomeIcon icon={faGithub} />
@@ -115,6 +117,7 @@ export default function Contact() {
           <a
             href='https://www.linkedin.com/in/mindy-chen-a689b4260/'
             target='_blank'
+            rel='noreferrer'
             className='hover:scale-110 transition-all duration-300 hover:drop-shadow-glow'
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
