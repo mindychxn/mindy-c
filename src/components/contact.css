@@ -1,0 +1,13 @@
+.contact {
+  background-color: hsla(267, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 0% 61%,
+      hsla(252, 87%, 64%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 40%, hsla(340, 100%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 94%, hsla(15, 100%, 73%, 0.56) 0px, transparent 50%),
+    radial-gradient(at 23% 58%, hsla(306, 100%, 50%, 0.5) 0px, transparent 50%),
+    radial-gradient(at 94% 44%, hsla(335, 100%, 72%, 0.81) 0px, transparent 50%),
+    radial-gradient(at 72% 64%, hsla(7, 100%, 58%, 1) 0px, transparent 50%);
+}

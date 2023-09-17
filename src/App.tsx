@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import LandingPage from './components/LandingPage';
 import Projects from './components/Projects';
 import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Route path='/#' Component={LandingPage} />
         <Route path='/#projects' Component={Projects} />
         <Route path='/#about' Component={AboutMe} />
+        <Route path='/#contact' Component={Contact} />
       </Routes>
 
       <div className='bg-black min-w-min'>
@@ -28,6 +30,7 @@ export default function App() {
         <LandingPage />
         <Projects />
         <AboutMe />
+        <Contact />
       </div>
     </BrowserRouter>
   );
