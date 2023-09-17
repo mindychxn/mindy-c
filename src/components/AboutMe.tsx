@@ -29,9 +29,9 @@ export default function AboutMe() {
         <div className='font-bold text-[44px] sm:text-6xl xl:text-7xl bg-clip-text bg-gradient-to-tr from-[#ffbf9c] via-[#f1e8ff] to-[#fb94f2] text-transparent'>
           About Me
         </div>
-        <div className='font-DMSans font-light md:text-xl 2xl:text-2xl !leading-relaxed lg:w-[90%] text-white'>
-          I am a second your computer science student at the University of
-          Waterloo. Personally, I love the countless possiblities that coding
+        <div className='font-DMSans font-light md:text-xl 2xl:text-2xl !leading-relaxed lg:w-[85%] text-white'>
+          I am a second your computer science student at the <span className='bg-clip-text bg-gradient-to-tr from-[#f7aaf3] via-[#f8f6e5] to-[#ff9271] text-transparent'>University of
+          Waterloo</span>. Personally, I love the countless possiblities that coding
           provides, allowing me to bring a vision or idea to life. Design is a
           passion of mine and I really enjoyed creating this personal website.
           Outside of coding, I enjoy reading, watching sitcoms / rom-coms,
