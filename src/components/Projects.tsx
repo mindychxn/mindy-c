@@ -50,6 +50,7 @@ export default function Projects() {
             onMouseOver={() => setPlayExpenseAnimation(true)}
             onMouseOut={() => setPlayExpenseAnimation(false)}
             right={false}
+            href='https://expensetracker-mc.netlify.app'
           >
             <div className='p-6 sm:p-10 rounded-lg bg-gradient-to-b from-[#512ad4] to-indigo-400 shadow-lg'>
               <div ref={expenseContainer} />
@@ -62,6 +63,7 @@ export default function Projects() {
             onMouseOut={() => setPlayGameAnimation(false)}
             right
             className='lg:mt-[100px] animate-float2 text-left lg:text-right'
+            href='https://simon-mc.netlify.app'
           >
             <div className='p-6 sm:p-10 rounded-lg bg-gradient-to-b to-red-400 from-orange-300'>
               <div ref={gameContainer} />
