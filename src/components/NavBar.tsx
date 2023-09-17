@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import { HashLink } from 'react-router-hash-link';
 
@@ -12,22 +12,14 @@ export default function NavBar({
   collapsed,
   className = '',
 }: NavBarProps) {
-  const [height, setHeight] = useState(0);
-  const navBarRef = useRef<HTMLDivElement>(null);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [currentPlace, setCurrentPlace] = useState('Home');
-  const currentStyles = 'shadow-[inset_0_0_20px_#ffffff7a]';
-  useEffect(() => {
-    setHeight(navBarRef.current!.clientHeight);
-  });
   return (
     <div className={`${className} w-full`}>
       <div
-        ref={navBarRef}
-        className='font-DMSans leading-widest text-cream mb-4 px-4 py-5 z-[100] w-full fixed rounded-lg font-light'
+        className='font-DMSans leading-widest text-cream mb-4 px-4 py-2 z-[100] w-full fixed rounded-lg font-light'
       >
         <div className='flex justify-between items-center gap-5'>
-          <div className='xl:w-[15%] sm:w-[35%] md:w-[30vw] w-[50vw] h-fit flex items-center rounded-full backdrop-blur-sm py-2.5'>
+          <div className='xl:w-[15%] sm:w-[35%] md:w-[30vw] w-[50vw] h-fit flex items-center rounded-full backdrop-blur-sm py-3'>
             <img
               className='invert drop-shadow-[1px_2px_5px_#fff6edde] px-5'
               src={logo}
@@ -61,13 +53,10 @@ export default function NavBar({
             <div className='space-x-4 pr-4'>
               {sections.map((section, i) => (
                 <HashLink
-                  smooth
+                  smooth 
                   to={'/#' + section.toLowerCase()}
                   key={i}
-                  className={`2xl:text-lg py-2.5 px-5 hover:scale-105 hover:translate-y-[0.3rem] rounded-full backdrop-blur-sm duration-500 hover:drop-shadow-[1px_3px_10px_#ffffffa8] transition ease-in-out ${
-                    currentPlace === section ? currentStyles : ''
-                  }`}
-                  onClick={() => setCurrentPlace(section)}
+                  className='2xl:text-lg py-3 px-5 bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
                 >
                   {section}
                 </HashLink>
@@ -76,24 +65,13 @@ export default function NavBar({
           )}
         </div>
         {collapsed && (
-          <div
-            className={`flex flex-col gap-4 items-end w-full z-[90] pr-4 transition-all duration-500 ${
-              mobileMenu
-                ? 'animate-[slideDown_1s] opacity-1'
-                : 'animate-[slideUp_1s] opacity-0'
-            }`}
-          >
+          <div className={`flex flex-col gap-4 items-end w-full z-[90] pr-4 transition-all duration-500 ${mobileMenu ? 'animate-[slideDown_1s] opacity-1' : 'animate-[slideUp_1s] opacity-0'}`}>
             {sections.map((section, i) => (
               <HashLink
-                smooth
-                to={'/#' + section.toLowerCase()}
-                key={i}
-                className={`${
-                  mobileMenu ? '' : 'pointer-events-none'
-                } 2xl:text-lg py-2.5 px-5 hover:scale-105 hover:translate-y-[0.3rem] bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:drop-shadow-[1px_3px_10px_#ffffffa8] transition ease-in-out ${
-                  currentPlace === section ? currentStyles : ''
-                }`}
-                onClick={() => setCurrentPlace(section)}
+                  smooth 
+                  to={'/#' + section.toLowerCase()}
+                  key={i}
+                className={`${mobileMenu ? '' : 'pointer-events-none'} 2xl:text-lg py-3 px-5 bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out`}
               >
                 {section}
               </HashLink>
