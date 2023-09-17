@@ -10,10 +10,6 @@ module.exports = {
     },
     extend: {
       keyframes: {
-        pulse: {
-          '0%, 100%': { transform: 'scale(1.02)'},
-          '50%': { transform: 'scale(1.05)'}
-        },
         float: {
           '0%': { transform: 'translateY(0px)'},
           '50%': { transform: 'translateY(10px)'},
@@ -21,10 +17,17 @@ module.exports = {
         },
         glow: {
           '100%': { textShadow: '0 0 25px #f8f6e5b3'}
+        },
+        slideDown: {
+          '0%' : {transform: 'translateY(-20px)'},
+          '100%' : {transform: 'translateY(0)'}
+        },
+        slideUp: {
+          '0%' : {transform: 'translateY(0)'},
+          '100%' : {transform: 'translateY(-20px)'}
         }
       },
       animation: {
-        pulse: 'pulse 5s ease-in-out infinite',
         float1: 'float 3s ease-in-out infinite',
         float2: 'float 3s ease-in-out -1.5s infinite',
         glow: 'glow 1.5s ease-in-out infinite alternate'
