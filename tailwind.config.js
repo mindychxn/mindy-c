@@ -16,7 +16,7 @@ module.exports = {
           '100%': { transform: 'translateY(0px)'}
         },
         glow: {
-          '100%': { textShadow: '0 0 20px #f8f6e536'}
+          '100%': { textShadow: '0 0 25px #f8f6e5b3'}
         },
         slideDown: {
           '0%' : {transform: 'translateY(-20px)'},
