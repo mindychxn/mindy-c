@@ -16,7 +16,7 @@ export default function NavBar({
   return (
     <div className={`${className} w-full`}>
       <div
-        className='font-DMSans leading-widest text-cream mb-4 px-4 py-2 z-[100] w-full fixed rounded-lg font-light'
+        className='font-DMSans leading-widest text-cream mb-4 px-4 py-4 z-[100] w-full fixed rounded-lg font-light'
       >
         <div className='flex justify-between items-center gap-5'>
           <div className='xl:w-[15%] sm:w-[35%] md:w-[30vw] w-[50vw] h-fit flex items-center rounded-full backdrop-blur-sm py-3'>
@@ -56,7 +56,7 @@ export default function NavBar({
                   smooth 
                   to={'/#' + section.toLowerCase()}
                   key={i}
-                  className='2xl:text-lg py-3 px-5 bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
+                  className='2xl:text-lg py-3 px-5 rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
                 >
                   {section}
                 </HashLink>
