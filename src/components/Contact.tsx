@@ -92,7 +92,7 @@ export default function Contact() {
               Submit
             </button>
             <div
-              className='font-light font-DMSans text-sm tracking-wide text-[#ffffffb5]'
+              className='font-light font-DMSans text-sm tracking-wide text-[#ffffffb5] mt-5'
               ref={resultRef}
             />
           </form>
