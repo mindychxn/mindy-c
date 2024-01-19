@@ -87,7 +87,7 @@ export default function Contact() {
             />
             <button
               type='submit'
-              className='font-DMSans font-light tracking-wider hover:scale-[1.02] hover:-translate-y-1 hover:drop-shadow-[1px_1px_5px_#ffffff69] transtion-all duration-500 mt-4 w-1/2 rounded-full px-5 py-4 bg-gradient-to-r from-indigo-500 to-[#ff6abc] outline-cream/10 outline'
+              className='font-DMSans font-light tracking-widest hover:scale-[1.02] hover:-translate-y-1 hover:drop-shadow-[1px_1px_5px_#ffffff40] transtion-all duration-500 mt-4 w-1/2 rounded-full px-5 py-4 bg-gradient-to-r from-indigo-500 to-[#ff6abc] shadow-sm'
             >
               Submit
             </button>
