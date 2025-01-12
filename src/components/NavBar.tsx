@@ -52,26 +52,43 @@ export default function NavBar({
           ) : (
             <div className='space-x-4 pr-4'>
               {sections.map((section, i) => (
-                <HashLink
-                  smooth 
-                  to={'/#' + section.toLowerCase()}
+                section === 'Resume' ? 
+                <a
+                  href="/resume.pdf"
                   key={i}
                   className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
                 >
                   {section}
-                </HashLink>
-              ))}
+                </a> :
+                  <HashLink
+                    smooth 
+                    to={'/#' + section.toLowerCase()}
+                    key={i}
+                    className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
+                  >
+                    {section}
+                  </HashLink>
+                )
+              )}
             </div>
           )}
         </div>
         {collapsed && (
           <div className={`flex flex-col gap-4 items-end w-full z-[90] pr-4 transition-all duration-500 ${mobileMenu ? 'animate-[slideDown_1s] opacity-1' : 'animate-[slideUp_1s] opacity-0'}`}>
             {sections.map((section, i) => (
+              section === 'Resume' ? 
+              <a
+                href="/resume.pdf"
+                key={i}
+                className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
+              >
+                {section}
+              </a> :
               <HashLink
-                  smooth 
-                  to={'/#' + section.toLowerCase()}
-                  key={i}
-                className={`${mobileMenu ? '' : 'pointer-events-none'} 2xl:text-lg py-3 px-5 bg-[#d1d1d129] rounded-full backdrop-blur-sm duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out`}
+                smooth 
+                to={'/#' + section.toLowerCase()}
+                key={i}
+                className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
               >
                 {section}
               </HashLink>
