@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './projects.css';
 import ProjectCard from './ProjectCard';
 import expenseLottie from '../assets/expense.json';
@@ -7,9 +7,6 @@ import todoLottie from '../assets/todo.json';
 import lottie, { AnimationItem } from 'lottie-web';
 
 export default function Projects() {
-  // const [playExpenseAnimation, setPlayExpenseAnimation] = useState(false);
-  // const [playGameAnimation, setPlayGameAnimation] = useState(false);
-  // const [playTodoAnimation, setPlayTodoAnimation] = useState(false);
   const expenseAnimation = useRef<AnimationItem | null>(null);
   const gameAnimation = useRef<AnimationItem | null>(null);
   const todoAnimation = useRef<AnimationItem | null>(null);
