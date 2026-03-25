@@ -54,7 +54,7 @@ export default function NavBar({
               {sections.map((section, i) => (
                 section === 'Resume' ? 
                 <a
-                  href="/resume.pdf"
+                  href="/Mindy_Chen.pdf"
                   key={i}
                   className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
                 >
@@ -78,7 +78,7 @@ export default function NavBar({
             {sections.map((section, i) => (
               section === 'Resume' ? 
               <a
-                href="/resume.pdf"
+                href="/Mindy_Chen.pdf"
                 key={i}
                 className='2xl:text-lg py-3 px-5 rounded-full duration-500 hover:shadow-[inset_0_0_20px_#ffffff7a] active:shadow-[inset_0_0_20px_#ffffff] transition-all ease-in-out'
               >

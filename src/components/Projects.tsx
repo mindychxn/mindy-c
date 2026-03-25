@@ -88,7 +88,7 @@ export default function Projects() {
               onMouseOut={() => handleMouseLeave(todoAnimation)}
               right={false}
               className='lg:mb-[100px] animate-float1 text-left lg:text-right'
-              href='https://github.com/mindychxn/todo'
+              href='https://perntodo-client.onrender.com'
             >
               <div className='p-6 sm:p-10 rounded-lg bg-gradient-to-b from-[#512ad4] to-indigo-300 shadow-lg h-[50%]'>
                 <div ref={todoContainer} />
